@@ -1,0 +1,2981 @@
+{
+	"info": {
+		"_postman_id": "b35230f7-4041-46a7-985f-8f31fd89ab8f",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36487532"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Borhan Feyzi\",\r\n    \"username\": \"borhan_feyzi\",\r\n    \"email\": \"borhan@gmail.com\",\r\n    \"phone\": \"09143527896\",\r\n    \"password\": \"borhan_feyzi89\",\r\n    \"confirmPassword\": \"borhan_feyzi89\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ban",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/ban/66f6d07e632110511b771ec4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"ban",
+								"66f6d07e632110511b771ec4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\": \"hatef82@gmail.com\",\r\n    \"password\": \"82711728Ha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/66f6c60812c65b1007ff040e",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"66f6c60812c65b1007ff040e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"66f6c49d05542c0b881c0ba1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/role",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updated User Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hatef Barari\",\r\n    \"username\": \"hatef_bt\",\r\n    \"email\": \"hatef82@gmail.com\",\r\n    \"phone\": \"09149532509\",\r\n    \"password\": \"82711728Hatef\",\r\n    \"confirmPassword\": \"82711728Hatef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"پایتون سیاه\",\r\n    \"href\": \"black-python\",\r\n    \"parent\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/categories/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/categories/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/categories/66fa614fff3c7a5c112120cc",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								"66fa614fff3c7a5c112120cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"آموزش NodeJS\",\r\n    \"href\": \"node-ex\",\r\n    \"parent\": \"66fa604aff3c7a5c112120b7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/categories/66fa60d9ff3c7a5c112120c1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								"66fa60d9ff3c7a5c112120c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/categories/back-End",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								"back-End"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "دوره وب سوکت",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "برای یادگیری وب سوکت به صورت پیشرفته ...",
+									"type": "text"
+								},
+								{
+									"key": "support",
+									"value": "گروه تلگرامی",
+									"type": "text"
+								},
+								{
+									"key": "href",
+									"value": "web-socket",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "900000",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "complete",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "categoryID",
+									"value": "66fa604aff3c7a5c112120b7",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "postman-cloud:///1ef89a30-8fdc-4ca0-ad48-69c2ee2b89f7"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/courses",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/node-ex",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"node-ex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/66fd987a9e1746284089f3db",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"66fd987a9e1746284089f3db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "آموزش nodejs بدون پیش نیاز",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "اموزش نود جی اس بدون پیش نیاز برای بازار کار",
+									"type": "text"
+								},
+								{
+									"key": "support",
+									"value": "پرسش و پاسخ در وبسایت",
+									"type": "text"
+								},
+								{
+									"key": "href",
+									"value": "node-ex",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2600000",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "در حال برگزاری",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categoryID",
+									"value": "66fa60d9ff3c7a5c112120c1",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "creator",
+									"value": "66f6c2e105b6d85fa2ed0eec",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/courses/66fd987a9e1746284089f3db",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"66fd987a9e1746284089f3db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register course user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":2140000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/courses/66fd987a9e1746284089f3db/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"66fd987a9e1746284089f3db",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get course By category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/category/back-end/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"category",
+								"back-end",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Related Cours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/related/api-with-node",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"related",
+								"api-with-node"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Popular",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/popular",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Presell",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/presell",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"presell"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/complete",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "session",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "وب سوکت چیست",
+									"type": "text"
+								},
+								{
+									"key": "free",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "postman-cloud:///1ef8a289-b9e9-4140-b97e-600ac6dc228b"
+								},
+								{
+									"key": "time",
+									"value": "8:06",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/courses/670d0bd3f7d27800db45f9c9/sessions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"670d0bd3f7d27800db45f9c9",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/Node-ex/sessions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"Node-ex",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/session/66fd953326c83dd7ed988614",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"session",
+								"66fd953326c83dd7ed988614"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "اموزش کانسپت بک اند به راحتی",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "00:33",
+									"type": "text"
+								},
+								{
+									"key": "free",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "postman-cloud:///1ef81ba4-d7a1-4000-8cf5-4f404315bff0"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/courses/session/66fd953326c83dd7ed988614",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"session",
+								"66fd953326c83dd7ed988614"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/courses/node-ex/66feebb64c99806f548c72da",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"courses",
+								"node-ex",
+								"66feebb64c99806f548c72da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Course",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"body\": \"مباحث دیزاین اپلیکیشن هم بگین\",\r\n    \"courseHref\": \"react-ex\",\r\n    \"score\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/comments/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/6701640e27474fb893ec41df",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"6701640e27474fb893ec41df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Answer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"body\": \"حتما تدریس داده میشه ژیگر\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/comments/67052f8ed2ff9f965fb3008f/answer",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"67052f8ed2ff9f965fb3008f",
+										"answer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rejected",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/67052f8ed2ff9f965fb3008f/reject",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"67052f8ed2ff9f965fb3008f",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Accept",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/67052f8ed2ff9f965fb3008f/accept",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"67052f8ed2ff9f965fb3008f",
+										"accept"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Article",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"body\": \"مباحث دیزاین اپلیکیشن هم بگین\",\r\n    \"courseHref\": \"react-ex\",\r\n    \"score\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/comments/article",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"article"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/article/6701640e27474fb893ec41df",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"article",
+										"6701640e27474fb893ec41df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Answer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"body\": \"حتما تدریس داده میشه ژیگر\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/comments/article/67052f8ed2ff9f965fb3008f/answer",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"article",
+										"67052f8ed2ff9f965fb3008f",
+										"answer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Rejected",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/article/67052f8ed2ff9f965fb3008f/reject",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"article",
+										"67052f8ed2ff9f965fb3008f",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Accept",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/article/67052f8ed2ff9f965fb3008f/accept",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"article",
+										"67052f8ed2ff9f965fb3008f",
+										"accept"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/comments/article",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"comments",
+										"article"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"mmd Hosein Barari\",\r\n    \"email\": \"mmdhosein@gmail.com\",\r\n    \"phone\": \"09210608292\",\r\n    \"body\":\"ارسال پسورد با اس ام اس هم اضافه کنید\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/contacts/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/contacts/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/contacts/670905f76f1b559fe0cc1100",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"contacts",
+								"670905f76f1b559fe0cc1100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hatef82@gmail.com\",\r\n    \"answer\":\"ممنون از پیشنهاد شما حتما این قابلیت اضافه میشود\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/contacts/answer",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"contacts",
+								"answer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Newsletter",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hatef82@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/newsletters/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"newsletters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/newsletters/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"newsletters",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Result Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/search/کار",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"search",
+								"کار"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\":\"دوره رو حتما تا اخر ماه تکمیل کن\",\r\n    \"admin\": \"66f6c49d05542c0b881c0ba1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/notifications/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\":\"دوره رو حتما تا اخر ماه تکمیل کن\",\r\n    \"admin\": \"66f6c49d05542c0b881c0ba1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/notifications/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/notifications/66f6c49d05542c0b881c0ba1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications",
+								"66f6c49d05542c0b881c0ba1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/notifications/670a66f6e961eb6edf52b2ca",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications",
+								"670a66f6e961eb6edf52b2ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/notifications/670a5f5c9cd6ecf56521a559/see",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"notifications",
+								"670a5f5c9cd6ecf56521a559",
+								"see"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Off",
+			"item": [
+				{
+					"name": "Set On All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"discount\": 50,\r\n    \"days\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/offs/all",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"offs",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"Yalda\",\r\n    \"percent\": 80,\r\n    \"course\": \"67015f0f02d71e30e0173909\",\r\n    \"max\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/offs/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"offs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/offs/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"offs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/offs/670aa2a1b55f59fc3f6e039f",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"offs",
+								"670aa2a1b55f59fc3f6e039f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One (Use)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course\": \"67015f0f02d71e30e0173909\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/offs/Yalda",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"offs",
+								"Yalda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "هوش مصتوعی چیست",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "بسلیبلیبااللللللللللللللللللللللبسلا",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "لاااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااافقققققققققققققققققققققققققققققققققثقققق",
+									"type": "text"
+								},
+								{
+									"key": "href",
+									"value": "wath-AI",
+									"type": "text"
+								},
+								{
+									"key": "categoryID",
+									"value": "66fa604aff3c7a5c112120b7",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "postman-cloud:///1ef89a30-8fdc-4ca0-ad48-69c2ee2b89f7"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1ef89a2b-dcc6-4110-840d-af573b8870e8",
+										"postman-cloud:///1ef89a1a-6fa8-42b0-9033-8a3a0ff299a8"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/articles",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "هوش مصتوعی چیست و چه کاربردی دارد",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "بسلیبلیبااللللللللللللللللللللللبسلا",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "لاااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااافقققققققققققققققققققققققققققققققققثقققق",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "href",
+									"value": "wath-AI",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categoryID",
+									"value": "66fa604aff3c7a5c112120b7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "/C:/Users/msi/Downloads/poster-01-bilderrahmen-treechild-zarte-blueten-removebg-preview-1.png"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1ef89a2b-dcc6-4110-840d-af573b8870e8",
+										"postman-cloud:///1ef89a1a-6fa8-42b0-9033-8a3a0ff299a8"
+									],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/articles/670c5f1a27a7ae8e615b1cf6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"670c5f1a27a7ae8e615b1cf6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get course By category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/articles/category/back-end",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"category",
+								"back-end"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Related Article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/articles/related/wath-ai",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"related",
+								"wath-ai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/articles/wath-ai",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"wath-ai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/articles/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/articles/670c5ef827a7ae8e615b1cec",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"670c5ef827a7ae8e615b1cec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/articles/progeamming-language/publish",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"progeamming-language",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Draft",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "زبان های برنامه نویسی",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "زبان های برنامه نویسی انواع مختلفی دارن...",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "یشابعهخاثعهرئنمبیهخخاثصقرئگمش خئحخوحکصبئرهختهختشیگلقئکنمبئهتحرنحبخجصثئوکنمصحهخرخنوبکرمئنمئصکمئکنمرئ",
+									"type": "text"
+								},
+								{
+									"key": "href",
+									"value": "progeamming-language",
+									"type": "text"
+								},
+								{
+									"key": "categoryID",
+									"value": "66fa60d9ff3c7a5c112120c1",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": "postman-cloud:///1ef8a2be-4a57-4450-a0f6-7708e21fa7c2"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/articles/draft",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"articles",
+								"draft"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/orders/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/orders/670133849135d600299c22af",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"orders",
+								"670133849135d600299c22af"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "Departments",
+					"item": [
+						{
+							"name": "Get Departments",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get One Departments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tickets/departments/670ebc28cf7d15f57bccc421",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"departments",
+										"670ebc28cf7d15f57bccc421"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Departments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"بخش فنی سایت \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/departments/670ebc28cf7d15f57bccc421",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"departments",
+										"670ebc28cf7d15f57bccc421"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Departments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"بخش فنی سایت \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/departments/670ecc47fd486d5b59bca06a",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"departments",
+										"670ecc47fd486d5b59bca06a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Departments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"بخش خدمات\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/departments/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"departments",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Departments Subs",
+					"item": [
+						{
+							"name": "Get Departments Subs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tickets/departments/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"departments",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Department Sub",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"اساتید فرانت اند\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/departments/670ecc47fd486d5b59bca06a/subs",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"departments",
+										"670ecc47fd486d5b59bca06a",
+										"subs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One Departments Subs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tickets/department-sub/670ebc6dcf7d15f57bccc423",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"department-sub",
+										"670ebc6dcf7d15f57bccc423"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Departments Subs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"مشاوره رایگان آکادمی\",\r\n    \"parent\": \"670ebbeccf7d15f57bccc420\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/department-sub/670ebc6dcf7d15f57bccc423",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"department-sub",
+										"670ebc6dcf7d15f57bccc423"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Departments Subs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tickets/department-sub/670ece659048fee302eb4c5c",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"department-sub",
+										"670ece659048fee302eb4c5c"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tickets",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"departmentID\": \"670ebc28cf7d15f57bccc421\",\r\n    \"departmentSubID\": \"670ebdcccf7d15f57bccc42b\",\r\n    \"priority\": 3,\r\n    \"title\": \"یک باگی پیدا شده\",\r\n    \"body\": \"در بخش ویدیو ها باگ وجود داره\",\r\n    \"course\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Ticket not Answer",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One Ticket & Answer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tickets/670f95a8ba6a4ffd6a4e5157/answer",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"670f95a8ba6a4ffd6a4e5157",
+										"answer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All User Ticket",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tickets/user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Answe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ticketID\":\"670f95a8ba6a4ffd6a4e5157\",\r\n    \"body\":\"بله حتما این سرفصل اضافه میشه\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tickets/answer",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tickets",
+										"answer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"نود جی اس\",\r\n    \"href\": \"nodejs\",\r\n    \"parent\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/menus/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"menus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/menus/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"menus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All In Panel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/menus/all",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"menus",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/menus/66fa614fff3c7a5c112120cc",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"menus",
+								"66fa614fff3c7a5c112120cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZjZjMmUxMDViNmQ4NWZhMmVkMGVlYyIsImlhdCI6MTcyNzUwNzk4MywiZXhwIjoxNzMwMDk5OTgzfQ.ulU-AdW3wPFj046qx5_mKghL71zgd63ZSaD8CqtYHao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"آموزش NodeJS\",\r\n    \"href\": \"node-ex\",\r\n    \"parent\": \"66fa604aff3c7a5c112120b7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/menus/66fa60d9ff3c7a5c112120c1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"menus",
+								"66fa60d9ff3c7a5c112120c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/menus/back-end",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"menus",
+								"back-end"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
