@@ -34,7 +34,7 @@ Installation & Run
 
 Clone the repository
 
-git clone https://github.com/YourUsername/your-repo-name.git
+git clone https://github.com/HatefBarari/blog-project
 cd your-repo-name
 
 
